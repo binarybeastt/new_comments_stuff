@@ -33,6 +33,7 @@ async def summarize_social_media_comments(request: CommentsRequest):
     # Create the prompt for the Gemini API
     prompt = f"""
     Summarize the following social media comments. Focus on the main topics, sentiments (positive, negative, neutral), and any recurring themes.
+    Make sure they're comments, if you don't see any comments, say "No comments found".
 
     Comments:
     {comments_text}
